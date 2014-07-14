@@ -42,7 +42,7 @@ $(document).ready(function(){
         y: 134.5,
         width: 68,
         height: Math.sin(30)*60,
-        fill: '#0067B4',
+        fill: '#3B4D81',
         stroke: '',
         strokeWidth: 0
     });
@@ -108,7 +108,7 @@ $(document).ready(function(){
         y: 66,
         width: 68,
         height: Math.sin(30)*60,
-        fill: '#F15A22',
+        fill: '#F58235',
         stroke: '',
         strokeWidth: 0
     });
