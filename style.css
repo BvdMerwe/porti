@@ -28,7 +28,9 @@ body
 a
 {
     transition: color .4s ease-in-out,
- color .4s ease-in-out;
+        color .4s ease-in-out,
+        text-shadow .4s ease-in-out,
+        text-shadow .4s ease-in-out;
 }
 
 a:link
@@ -52,6 +54,7 @@ a:hover
 {
     color: rgba(35, 31, 32, 1);
     text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #about, #portfolio

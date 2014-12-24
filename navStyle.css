@@ -22,6 +22,14 @@
 /**********************************/
 
 /**********back spinner************/
+
+/*
+Used this site to calculate hexagons
+
+http://www.had2know.com/academics/hexagon-measurement-calculator.html
+
+*/
+
 #back_oct_outline
 {
     background: #231F20;
@@ -147,7 +155,9 @@
     text-decoration: none;
     text-align: center;
     transition: color .4s ease-in-out,
- color .4s ease-in-out;
+        color .4s ease-in-out,
+        text-shadow .4s ease-in-out,
+        text-shadow .4s ease-in-out;
 }
 
 #top
