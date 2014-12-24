@@ -4,7 +4,18 @@ $(document).ready(function(){
         opacity: 1
     }, 2000);
     
-    if (window.location.href.indexOf("index") > -1 || window.location.href.indexOf(".html") < 0)
+    $("a").on("click", function(e){
+        e.preventDefault();
+        var newLocation = this.href;
+        $("#content").animate({
+            opacity: 0
+        }, 500, function(){
+            window.location.href = newLocation;
+        });
+    });
+    
+    
+/*    if (window.location.href.indexOf("index") > -1 || window.location.href.indexOf(".html") < 0)
     {
         var stage = new Kinetic.Stage({
             container: 'cube',
@@ -236,5 +247,5 @@ $(document).ready(function(){
         $(this).animate({
             opacity: 0.4
         }, 500);
-    });
+    });*/
 });

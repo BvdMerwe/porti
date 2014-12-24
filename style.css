@@ -5,31 +5,15 @@ body
 
 #content
 {
-    min-width: 800px;
     margin: 0 auto;
-}
-
-#cube
-{
-    margin: 0 auto;
-    width: 400px;
-    padding-top: 50px;
-}
-
-#cube-small
-{
-    position: fixed;
-    top: 50px;
-    left: 0px;
-    opacity: 0.6;
 }
 
 #head
 {
-    min-width: 100%;
     position: fixed;
     top: 0px;
     left: 0px;
+    z-index: 1;
 }
 
 .header
@@ -39,6 +23,12 @@ body
     font-size: 43pt;
     font-weight: bolder;
     letter-spacing: 8px;
+}
+
+a
+{
+    transition: color .4s ease-in-out,
+ color .4s ease-in-out;
 }
 
 a:link
@@ -60,7 +50,7 @@ a:active
 
 a:hover
 {
-    color: #231F20;
+    color: rgba(35, 31, 32, 1);
     text-decoration: none;
 }
 
@@ -92,11 +82,21 @@ a:hover
 
 #contact
 {
+/*
     margin-top: 100px;
     margin-left: 150px;
+*/
 }
 
 #contact ul
 {
     list-style: none;
+}
+
+@media screen and (max-width: 600px)
+{
+    .header
+    {
+        font-size: 30pt;
+    }
 }
