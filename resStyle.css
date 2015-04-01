@@ -1,0 +1,160 @@
+h1, h2, h3, h4
+{
+    line-height: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1
+{
+    margin-bottom: 10px;
+}
+
+h2
+{
+    margin-bottom: 10px;
+/*    margin-left: 5px;*/
+}
+
+h3
+{
+/*    margin-left: 10px;*/
+}
+
+h4
+{
+    
+}
+
+ul
+{
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+}
+
+#contact
+{
+    position: fixed;
+    top: 30px;
+    width: 260px;
+    right: -300px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 5px;
+    z-index: 1;
+    transition: right .4s ease-in-out;
+}
+
+#contact.active
+{
+    right: 0px;
+    transition: right .4s ease-in-out;
+}
+
+#contact ul
+{
+    padding: 0;
+}
+
+#contact li
+{
+    padding-bottom: 5px;
+}
+
+#contact .label
+{
+    display: inline-block;
+    position: absolute;
+    left: -45px;
+    top: 0px;
+    opacity: 0.2;
+    padding: 5px;
+    cursor: pointer;
+    content: "<img src='address-book.svg' />";
+}
+
+#contact .label img
+{
+    width: 45px;
+}
+
+#resume
+{
+    width: 600px;
+    margin: 0 auto;
+}
+
+#professional, #education, #skills
+{
+    margin-bottom: 10px;
+}
+
+.job, .place, .skilltable
+{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.job .description
+{
+/*    margin: */
+}
+
+.year
+{
+    float: right;
+}
+
+.skilltable
+{
+    display: table;
+    margin: 0 auto;
+    border: 1px solid #777;
+}
+
+.row
+{
+    display: table-row;
+}
+
+.row.topRow .item
+{
+    font-weight: bold;
+}
+
+.item
+{
+    display: table-cell;
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px)
+{
+    #resume
+    {
+        width: auto;
+    }
+    
+/*
+    .item
+    {
+        padding: 5px;
+        font-size: 11pt;
+    }
+*/
+}
+
+@media screen and (max-width: 400px)
+{
+    #resume
+    {
+        width: auto;
+    }
+    
+    .item
+    {
+        padding: 5px;
+        font-size: 11pt;
+    }
+}

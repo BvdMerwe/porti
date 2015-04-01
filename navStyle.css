@@ -14,9 +14,18 @@
     #navBlock
     {
         transform: scale(0.7);
-        margin-left:-60px;
+/*        margin-left:-60px;*/
         margin-top: 0px;
         margin-bottom: -50px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+    #navBlock
+    {
+        margin-left:-60px;
     }
 }
 /**********************************/
@@ -58,6 +67,7 @@ http://www.had2know.com/academics/hexagon-measurement-calculator.html
 	border-right: 173px solid transparent;
 	border-bottom: 100px solid #231F20;
 }
+
 #back_oct_outline:after 
 {
 	content: "";
@@ -99,6 +109,7 @@ http://www.had2know.com/academics/hexagon-measurement-calculator.html
 	border-right: 129px solid transparent; /*h/2*/
 	border-bottom: 75px solid #B3262A;
 }
+
 #back_oct:after 
 {
 	content: "";

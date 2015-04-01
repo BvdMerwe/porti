@@ -14,6 +14,10 @@ $(document).ready(function(){
         });
     });
     
+    $("#contact .label").on("click", function(){
+        $(this).parent("#contact").toggleClass("active");
+    });
+    
     
 /*    if (window.location.href.indexOf("index") > -1 || window.location.href.indexOf(".html") < 0)
     {
