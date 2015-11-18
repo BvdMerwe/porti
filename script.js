@@ -1,22 +1,89 @@
 $(document).ready(function(){
+//    if ($(".section").position().top + $("#about").height() < $(document).height())
+//    {
+//        var difference = $(document).height() - ($("#about").position().top + $("#about").height());
+////        alert($("#about").position().top);
+//        $(".section").css("padding-bottom", (difference/2)+"px");
+//    }
+    
     $("#content").css("opacity", 0);
     $("#content").animate({
         opacity: 1
     }, 2000);
     
-    $("a").on("click", function(e){
+    $("#navBlock a, #navBlockSmall a").on("click", function(e){
         e.preventDefault();
-        var newLocation = this.href;
-        $("#content").animate({
-            opacity: 0
-        }, 500, function(){
-            window.location.href = newLocation;
-        });
+        $("body").scrollTo($(this).attr('href'));
+//        $("#content").animate({
+//            opacity: 0
+//        }, 500, function(){
+//            window.location.href = newLocation;
+//        });
+        $("#navBlockSmall, #navBlock").children("a").removeClass("active");
+        $("#navBlockSmall, #navBlock").children("#"+$(this).attr("id")).addClass("active");
     });
     
     $("#contact .label").on("click", function(){
         $(this).parent("#contact").toggleClass("active");
     });
+    
+    
+    if ($(document).width() > 400)
+    {
+        var scrollPosNav = $("#navBlock").outerHeight() + $("#navBlock").position().top;
+
+        $(document).scroll(function(){
+            if ($(document).scrollTop() > scrollPosNav)
+            {
+                $("#navBlockSmall").addClass("leftNav");
+                $("#navBlock").addClass("leftNav");
+            }
+            else
+            {
+                $("#navBlockSmall").removeClass("leftNav");
+                $("#navBlock").removeClass("leftNav");
+            }
+            
+            if ( 
+               $(document).scrollTop() < $("#resume").position().top)
+            {
+                $(".left").addClass("active");
+                $(".right").removeClass("active");
+                $(".top").removeClass("active");
+                if(history.pushState) {
+                    history.pushState(null, null, '#about');
+                }
+                else {
+                    window.location.hash = '#about';
+                }
+            }
+            else if (
+               $(document).scrollTop() < $("#portfolio").position().top)
+            {
+                $(".top").addClass("active");
+                $(".right").removeClass("active");
+                $(".left").removeClass("active");
+                if(history.pushState) {
+                    history.pushState(null, null, '#resume');
+                }
+                else {
+                    window.location.hash = '#resume';
+                }
+            }
+            else if ($(document).scrollTop() > $("#portfolio").position().top)
+            {
+                $(".right").addClass("active");
+                $(".left").removeClass("active");
+                $(".top").removeClass("active");
+                if(history.pushState) {
+                    history.pushState(null, null, '#portfolio');
+                }
+                else {
+                    window.location.hash = '#portfolio';
+                }
+            }
+        });
+    }
     
     
 /*    if (window.location.href.indexOf("index") > -1 || window.location.href.indexOf(".html") < 0)
@@ -253,3 +320,21 @@ $(document).ready(function(){
         }, 500);
     });*/
 });
+
+$.fn.scrollTo = function( target, options, callback ){
+  if(typeof options == 'function' && arguments.length == 2){ callback = options; options = target; }
+  var settings = $.extend({
+    scrollTarget  : target,
+    offsetTop     : 50,
+    duration      : 500,
+    easing        : 'swing'
+  }, options);
+  return this.each(function(){
+    var scrollPane = $(this);
+    var scrollTarget = (typeof settings.scrollTarget == "number") ? settings.scrollTarget : $(settings.scrollTarget);
+    var scrollY = (typeof scrollTarget == "number") ? scrollTarget : scrollTarget.offset().top + scrollPane.scrollTop() - parseInt(settings.offsetTop);
+    scrollPane.animate({scrollTop : scrollY }, parseInt(settings.duration), settings.easing, function(){
+      if (typeof callback == 'function') { callback.call(this); }
+    });
+  });
+}

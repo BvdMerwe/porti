@@ -70,7 +70,6 @@ ul
     opacity: 0.2;
     padding: 5px;
     cursor: pointer;
-    content: "<img src='address-book.svg' />";
 }
 
 #contact .label img
@@ -135,14 +134,6 @@ ul
     {
         width: auto;
     }
-    
-/*
-    .item
-    {
-        padding: 5px;
-        font-size: 11pt;
-    }
-*/
 }
 
 @media screen and (max-width: 400px)

@@ -2,26 +2,36 @@
 <html>
     <head>
         <title>Bernardus van der Merwe</title>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="script.js"></script>
         <link href="style.css" rel="stylesheet">
         <link href="navStyle.css" rel="stylesheet">
+        <link href="resStyle.css" rel="stylesheet">
     </head>
     <body>
         <div id="content">
+<!--
             <div id="head">
                 <span class="header"><a href="index.html">BERNARDUS</a></span>
             </div>
+-->
             <div id="navBlock">
                 <div id="back_oct_outline"></div>
                 <div id="back_oct"></div>
-                <a href="resume.html" id="top" class="inner">RESUME</a>
-                <a href="index.html" id="left" class="inner active">HOME</a>
-                <a href="portfolio.html" id="right" class="inner">PORTFOLIO</a>
+                <a href="#resume" class="top inner">RESUME</a>
+                <a href="#about" class="left inner active">HOME</a>
+                <a href="#portfolio" class="right inner">PORTFOLIO</a>
             </div>
-            <div id="about">
+            <div id="navBlockSmall">
+                <div id="back_oct_outline"></div>
+                <div id="back_oct"></div>
+                <a href="#resume" class="top inner">RESUME</a>
+                <a href="#about" class="left inner active">HOME</a>
+                <a href="#portfolio" class="right inner">PORTFOLIO</a>
+            </div>
+            <div id="about" class="section">
                 <h3>Let me introduce myself.</h3>
                 <p>
                     I am Bernardus van der Merwe. I'm a web designer and developer. 
@@ -37,6 +47,27 @@
                 </p>
                 <p>
                     Please feel free to use it and see the rest of the site.
+                </p>
+            </div>
+            <div id="contact">
+                <div class="label"><img src="address-book.svg" /></div>
+                <ul>
+                    <li>E-mail: bernardusvdm@gmail.com</li>
+                    <li>Phone: (+27) 72 625 1917</li>
+                    <li>Twitter: <a href="http://twitter.com/bvdmerwe" target="_blank">@bvdmerwe</a></li>
+                    <li>Facebook: <a href="http://www.facebook.com/BernardvdM" target="_blank">Bernard van der Merwe</a></li>
+                    <li>LinkedIn: <a href="http://za.linkedin.com/in/bernardusvdm" target="_blank">Bernard van der Merwe</a></li>
+                    <li>Instagram: <a href="http://instagram.com/bnardus" target="_blank">@bnardus</a></li>
+                </ul>
+            </div>
+            <div id="resume" class="section">
+                <div class="content">
+                    <a href="images/CV2015.png"><img src="images/CV2015.png" alt="BVDM Resume" id="resImg"/></a>
+                </div>   
+            </div>
+            <div id="portfolio" class="section">
+                <p>
+                    This page is still under construction and will be up as soon as I am done putting it together.
                 </p>
             </div>
         </div>
